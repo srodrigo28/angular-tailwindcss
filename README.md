@@ -35,12 +35,12 @@ Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) (que in
 
 ## Servidor de Desenvolvimento
 
-Execute `npm start` ou `ng serve` para iniciar o servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
+Execute `npm start` ou `npx ng serve` para iniciar o servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
 
 ## Build
 
-Execute `npm run build` ou `ng build` para compilar o projeto. Os artefatos da compilação serão armazenados no diretório `dist/`.
+Execute `npm run build` ou `npx ng build` para compilar o projeto. Os artefatos da compilação serão armazenados no diretório `dist/`.
 
 ## Executando Testes Unitários
 
-Execute `npm test` ou `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
+Execute `npm test` ou `npx ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).

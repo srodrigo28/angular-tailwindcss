@@ -1,40 +1,68 @@
-<div class="min-h-screen bg-gray-100">
-    <header class="bg-white shadow">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <!-- Sua Logo Aqui -->
-                        <img class="w-8 h-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                            alt="Workflow">
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="flex items-baseline ml-10 space-x-4">
-                            <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md"
-                                aria-current="page">Dashboard</a>
-                        </div>
-                    </div>
+<div class="min-h-screen bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <a routerLink="/">Treina<span class="text-indigo-400">Dev</span></a>
+            </div>
+            <div class="flex items-center">
+                <div *ngIf="user" class="hidden sm:block mr-4 text-sm text-gray-400">
+                    {{ user.email }}
                 </div>
-                <div class="flex items-center">
-                    <div *ngIf="user" class="mr-4 text-sm text-gray-500">
-                        {{ user.email }}
-                    </div>
-                    <button (click)="logout()"
-                        class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700">
-                        Sair
-                    </button>
-                </div>
+                <button (click)="logout()"
+                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                    Sair
+                </button>
             </div>
         </div>
     </header>
-    <main>
-        <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="px-4 py-6 bg-white rounded-lg shadow sm:px-0">
-                <div class="p-4 border-4 border-gray-200 border-dashed rounded-lg h-96">
-                    <h1 class="text-2xl">Bem-vindo ao Dashboard!</h1>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-8">Meu Painel</h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Courses Section -->
+            <div class="lg:col-span-2">
+                <h2 class="text-2xl font-semibold mb-4">Meus Cursos</h2>
+                <div class="space-y-6">
+                    <div *ngFor="let course of courses"
+                        class="bg-gray-800 rounded-lg shadow-lg p-6 flex items-center space-x-6">
+                        <div class="text-4xl">{{ course.icon }}</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold">{{ course.name }}</h3>
+                            <p class="text-gray-400 text-sm">
+                                {{ course.videosWatched }} / {{ course.totalVideos }} vídeos assistidos
+                            </p>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="bg-indigo-500 h-2.5 rounded-full" [style.width.%]="course.completion"></div>
+                            </div>
+                            <p class="text-right text-sm text-indigo-400 font-semibold mt-1">{{ course.completion }}%
+                                completo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">Mural de Conquistas</h2>
+                <div class="bg-gray-800 rounded-lg shadow-lg p-6 space-y-4">
+                    <div *ngFor="let achievement of achievements" class="flex items-start">
+                        <div class="text-3xl mr-4 mt-1">{{ achievement.icon }}</div>
+                        <div class="flex-1">
+                            <p class="font-bold">{{ achievement.level }} - {{ achievement.month }}</p>
+                            <p class="text-sm text-gray-400">{{ achievement.description }}</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-2 space-x-4">
+                                <span>🎬 {{ achievement.videosWatched }} vídeos</span>
+                                <span>⏱️ {{ achievement.totalHours }} horas</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 </div>
+
 

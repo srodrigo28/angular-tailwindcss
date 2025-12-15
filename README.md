@@ -12,7 +12,7 @@ Aqui estão algumas telas da aplicação:
 
 | Tela 01 | Tela 02 | Tela 03 |
 | :---: | :---: | :---: |
-| <img src="./screens/home.png" alt="Tela 01" width="300"/> | <img src="./screens/home-v2.png" alt="Tela 02" width="300"/> | <img src="./screens/home-v3.png" alt="Tela 03" width="300"/> |
+| <img src="./screens/home.png" alt="Tela 01" width="300"/> | <img src="./screens/login.png" alt="Tela 02" width="300"/> | <img src="./screens/dashboard.png" alt="Tela 03" width="300"/> |
 
 ## Pré-requisitos
 

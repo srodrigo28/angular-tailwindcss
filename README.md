@@ -22,7 +22,7 @@ Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) (que in
 
 1. Clone o repositório:
    ```bash
-   git clone <URL_DO_SEU_REPOSITORIO>
+   git clone https://github.com/srodrigo28/angular-tailwindcss
    ```
 2. Navegue até o diretório do projeto:
    ```bash

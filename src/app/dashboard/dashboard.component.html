@@ -1,0 +1,40 @@
+<div class="min-h-screen bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <!-- Sua Logo Aqui -->
+                        <img class="w-8 h-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                            alt="Workflow">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="flex items-baseline ml-10 space-x-4">
+                            <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md"
+                                aria-current="page">Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div *ngIf="user" class="mr-4 text-sm text-gray-500">
+                        {{ user.email }}
+                    </div>
+                    <button (click)="logout()"
+                        class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700">
+                        Sair
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="px-4 py-6 bg-white rounded-lg shadow sm:px-0">
+                <div class="p-4 border-4 border-gray-200 border-dashed rounded-lg h-96">
+                    <h1 class="text-2xl">Bem-vindo ao Dashboard!</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+

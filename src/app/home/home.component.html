@@ -1,0 +1,105 @@
+<div class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+          <a routerLink="/">Treina<span class="text-indigo-400">Dev</span></a>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a routerLink="/" class="hover:text-indigo-400">Home</a>
+          <a href="#services" class="hover:text-indigo-400">Serviços</a>
+          <a href="#contact" class="hover:text-indigo-400">Contato</a>
+        </div>
+        <a routerLink="/login"
+          class="hidden md:block cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+          Login
+        </a>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a routerLink="/" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
+        <a href="#services" class="block py-2 px-4 text-sm hover:bg-gray-700">Serviços</a>
+        <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-700">Contato</a>
+        <a routerLink="/login" class="block py-2 px-4 text-sm hover:bg-gray-700">Login</a>
+      </div>
+    </header>
+  
+    <!-- Hero Section -->
+    <main>
+      <section class="bg-gray-900 text-center py-20 px-6">
+        <h1 class="text-5xl font-extrabold mb-4">Treinamentos de Desenvolvimento Personalizados</h1>
+        <p class="text-xl text-gray-400 mb-8">Eleve suas habilidades de programação com cursos feitos sob medida para
+          você.</p>
+        <a href="#services"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+          Conheça Nossos Cursos
+        </a>
+      </section>
+  
+      <!-- Services Section -->
+      <section id="services" class="py-20 px-6 bg-gray-800">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-12">Nossos Serviços</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+              <div class="text-5xl text-indigo-400 mb-4">💻</div>
+              <h3 class="text-2xl font-bold mb-2">Desenvolvimento Web</h3>
+              <p class="text-gray-400">Aprenda a criar aplicações web modernas com as tecnologias mais recentes do
+                mercado.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+              <div class="text-5xl text-indigo-400 mb-4">📱</div>
+              <h3 class="text-2xl font-bold mb-2">Desenvolvimento Mobile</h3>
+              <p class="text-gray-400">Construa aplicativos nativos e multiplataforma para iOS e Android.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+              <div class="text-5xl text-indigo-400 mb-4">☁️</div>
+              <h3 class="text-2xl font-bold mb-2">Cloud & DevOps</h3>
+              <p class="text-gray-400">Domine a cultura DevOps e as principais plataformas de nuvem como AWS e Azure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 px-6 bg-gray-900">
+          <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold mb-4">Pronto para Começar?</h2>
+              <p class="text-xl text-gray-400 mb-8">Entre em contato conosco e dê o próximo passo na sua carreira.</p>
+              <a href="https://wa.me/5562998579084" target="_blank"
+                  class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                  Fale Conosco no WhatsApp
+              </a>
+          </div>
+      </section>
+    </main>
+  
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+      <div class="container mx-auto text-center text-gray-400">
+        <p>&copy; 2025 TreinaDev. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5562998579084" target="_blank"
+      class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300 z-50">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.849 6.081l-1.214 4.439 4.533-1.186z" />
+      </svg>
+    </a>
+  </div>
+  
